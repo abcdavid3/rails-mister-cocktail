@@ -1,0 +1,6 @@
+<!-- app/views/admin/cocktails/index.html.erb -->
+<h1>My list of cocktails</h1>
+<% @cocktails.each do |cocktail| %>
+  <h2><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h2>
+<% end %>
+<h3><%= link_to "Create a new scrumptious cocktail!", new_cocktail_path %></h3>
